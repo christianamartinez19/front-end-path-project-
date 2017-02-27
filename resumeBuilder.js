@@ -56,7 +56,7 @@ bio.display = function(){
         formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
         $("#skills").append(formattedSkill);
 
-    //footer contact info
+   
     var formattedTwitter = HTMLtwitter.replace(/%data%/g, bio.contacts.twitter);
     $("#topContacts").append(formattedTwitter);
 
@@ -74,8 +74,7 @@ bio.display = function(){
     };
 
 }
-// Work History
-//==========================================================================
+// Work 
 
 var work = {
     "jobs": [
@@ -122,7 +121,7 @@ work.display = function(){
 };
 
 // Projects
-//==========================================================================
+
 
 var projects = {
     "projects":[{
@@ -160,7 +159,7 @@ projects.display = function(){
 }
 
 // Education
-//==========================================================================
+
 
 var education = {
     "schools": [
@@ -256,13 +255,6 @@ $(".education-entry:last").append(HTMLonlineClasses);
 
 }
 
-
-
-// Internationalize Name
-//==========================================================================
-
-
-// Capitalize all last name and ensure first letter in first name is capitalized
 function inName(name){
     var name = bio.name;
     name = name.trim().split(" ");
@@ -276,15 +268,6 @@ function inName(name){
 }
 
 $("#main").append(internationalizeButton)
-
-
-// Clicks (Analytics)
-//==========================================================================
-
-
-
-// Call functions
-//==========================================================================
 
 bio.display();
 work.display();
